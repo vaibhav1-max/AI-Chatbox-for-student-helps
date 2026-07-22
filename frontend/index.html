@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Support Assistant</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <h1>AI Student Support</h1>
+        <p>Ask about attendance, marks, fees, timetable, notices, and more.</p>
+        <div class="demo-box">
+          <strong>Demo Login</strong>
+          <span>samarth@example.com</span>
+          <span>student123</span>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <section class="login-card" id="loginCard">
+          <h2>Student Login</h2>
+          <form id="loginForm">
+            <label>Email<input type="email" id="email" value="samarth@example.com" required /></label>
+            <label>Password<input type="password" id="password" value="student123" required /></label>
+            <button type="submit">Login</button>
+          </form>
+          <div id="loginMessage"></div>
+        </section>
+
+        <section class="dashboard hidden" id="dashboard">
+          <div class="topbar">
+            <div>
+              <h2 id="welcomeLabel">Welcome</h2>
+              <p id="studentMeta"></p>
+            </div>
+            <button id="logoutBtn">Logout</button>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-card" id="attendanceStat">Attendance</div>
+            <div class="stat-card" id="resultStat">Result</div>
+            <div class="stat-card" id="feeStat">Fees</div>
+            <div class="stat-card" id="assignmentStat">Assignments</div>
+          </div>
+
+          <div class="content-grid">
+            <div class="panel">
+              <h3>Chatbot</h3>
+              <div class="chat-window" id="chatWindow">
+                <div class="message bot">Hello Samarth 👋 How can I help?</div>
+              </div>
+              <form id="chatForm" class="chat-form">
+                <input id="chatInput" type="text" placeholder="Type your question..." required />
+                <button type="submit">Ask</button>
+              </form>
+            </div>
+
+            <div class="panel">
+              <h3>Quick Access</h3>
+              <ul class="quick-links">
+                <li><button data-question="What is my attendance?">Attendance</button></li>
+                <li><button data-question="Show my semester result.">Marks</button></li>
+                <li><button data-question="How much fee is pending?">Fees</button></li>
+                <li><button data-question="What are my assignments?">Assignments</button></li>
+                <li><button data-question="What notices are available?">Notices</button></li>
+                <li><button data-question="Where is Computer Lab 3?">Knowledge Base</button></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

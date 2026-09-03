@@ -56,7 +56,8 @@ button {
   color: #082f49;
   font-weight: bold;
 }
-.hidden { display: none; }
+.hidden,
+.dashboard.hidden { display: none; }
 .dashboard { display: block; }
 .topbar {
   padding: 16px 20px;
